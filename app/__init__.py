@@ -60,18 +60,12 @@ def MotoBoyDelivery(numberMotoboys,store1,store2,store3,share1,share2,share3):
 
 def resultDeliveryDay(numberMotoboys,**kwargs):
     
-    # store1 = kwargs['store1'] if 'store1' in kwargs else [50,50,50]
-    # store2 = kwargs['store2'] if 'store2' in kwargs else [50,50,50,50]
-    # store3 = kwargs['store3'] if 'store3' in kwargs else [50,50,100]
-    # share1 = kwargs['share1'] if 'share1' in kwargs else 0.05
-    # share2 = kwargs['share2'] if 'share2' in kwargs else 0.05
-    # share3 = kwargs['share3'] if 'share3' in kwargs else 0.15
-    store1 = [100,100,100]
-    store2 = [50,75]
-    store3 = [150]
-    share1 = 0.15
-    share2 = 0.25
-    share3 = 0.35
+    store1 = kwargs['store1'] if 'store1' in kwargs else [50,50,50]
+    store2 = kwargs['store2'] if 'store2' in kwargs else [50,50,50,50]
+    store3 = kwargs['store3'] if 'store3' in kwargs else [50,50,100]
+    share1 = kwargs['share1'] if 'share1' in kwargs else 0.05
+    share2 = kwargs['share2'] if 'share2' in kwargs else 0.05
+    share3 = kwargs['share3'] if 'share3' in kwargs else 0.15
     motoboy = kwargs['motoboy'] if 'motoboy' in kwargs else None
 
     result = MotoBoyDelivery(numberMotoboys,store1,store2,store3,share1,share2,share3)

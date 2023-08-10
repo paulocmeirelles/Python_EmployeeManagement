@@ -38,3 +38,7 @@ def test_MotoBoyDelivery():
                                    'motoboy2': {'0': {'delivery': 'loja 3', 'share': 0.35, 'value': 150}, 
                                                 '1': {'delivery': 'loja 1', 'share': 0.15, 'value': 100}}, 
                                    'motoboy3': {'0': {'delivery': 'loja 1', 'share': 0.15, 'value': 100}}}
+
+@pytest.mark.skip(reason="The result of app")
+def test_app():
+    assert True

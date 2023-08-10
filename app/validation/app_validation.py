@@ -29,3 +29,17 @@ class InputValues():
             return name
         else:
             return name.lower()
+        
+    @staticmethod
+    def validationFloat(number):
+        if number=="":
+            number = None
+            return number
+        else:
+            number = number.replace(",",".")
+            try:
+                number = float(number)
+                return number
+            except:
+                return False
+        
