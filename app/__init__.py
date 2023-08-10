@@ -7,12 +7,13 @@ def MotoBoyDelivery(numberMotoboys,store1,store2,store3,share1,share2,share3):
     didStore1 = False
     didStore2 = False
     didStore3 = False
+    #Here we can do sort to be more fair
     arrayMotoboy = app_helper.arrayMoto(numberMotoboys)
     dictMotoBoy = app_helper.createDictMotoboy(arrayMotoboy)
 
     for i in range(math.ceil((len(store1)+len(store2)+len(store3))/numberMotoboys)):
        
-      if arrayOrder.count('motoboy4') == round and len(store1)>0:
+      if arrayOrder.count('motoboy4') == round and len(store1)>0 and 'motoboy4' in arrayMotoboy:
           # print('Motoboy4 em direção a loja 1')
           dictMotoBoy["motoboy4"][f"{round}"]= {"delivery":"loja 1","share":share1,"value":store1[0]}
           store1.pop(0)
@@ -42,7 +43,7 @@ def MotoBoyDelivery(numberMotoboys,store1,store2,store3,share1,share2,share3):
 
         elif arrayOrder.count(moto) == round and not didStore1 and len(store1)>0: 
           # print(f"{moto} em direção a loja 1")
-          dictMotoBoy[moto][f"{round}"] = {"delivery":"loja 3","share":share3,"value":store1[0]}
+          dictMotoBoy[moto][f"{round}"] = {"delivery":"loja 1","share":share1,"value":store1[0]}
           store1.pop(0)
           arrayOrder.append(moto)
           didStore1 = True
@@ -54,17 +55,23 @@ def MotoBoyDelivery(numberMotoboys,store1,store2,store3,share1,share2,share3):
 
     
       round +=1
-
+    print(dictMotoBoy)
     return dictMotoBoy
 
 def resultDeliveryDay(numberMotoboys,**kwargs):
     
-    store1 = kwargs['store1'] if 'store1' in kwargs else [50,50,50]
-    store2 = kwargs['store2'] if 'store2' in kwargs else [50,50,50,50]
-    store3 = kwargs['store3'] if 'store3' in kwargs else [50,50,100]
-    share1 = kwargs['share1'] if 'share1' in kwargs else 0.05
-    share2 = kwargs['share2'] if 'share2' in kwargs else 0.05
-    share3 = kwargs['share3'] if 'share3' in kwargs else 0.15
+    # store1 = kwargs['store1'] if 'store1' in kwargs else [50,50,50]
+    # store2 = kwargs['store2'] if 'store2' in kwargs else [50,50,50,50]
+    # store3 = kwargs['store3'] if 'store3' in kwargs else [50,50,100]
+    # share1 = kwargs['share1'] if 'share1' in kwargs else 0.05
+    # share2 = kwargs['share2'] if 'share2' in kwargs else 0.05
+    # share3 = kwargs['share3'] if 'share3' in kwargs else 0.15
+    store1 = [100,100,100]
+    store2 = [50,75]
+    store3 = [150]
+    share1 = 0.15
+    share2 = 0.25
+    share3 = 0.35
     motoboy = kwargs['motoboy'] if 'motoboy' in kwargs else None
 
     result = MotoBoyDelivery(numberMotoboys,store1,store2,store3,share1,share2,share3)
@@ -102,5 +109,4 @@ def resultDeliveryDay(numberMotoboys,**kwargs):
         summary['total'] = sum
         result[moto]['summary'] = summary
         
-      
       return app_helper.summaryMotoBoy(result,motoboys)
