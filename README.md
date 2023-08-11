@@ -2,16 +2,16 @@
 
 ## PORTUGUES
 
-## SOBRE
+### SOBRE
 
 - Este projeto visa solucionar um problema simples de distribuição de empregados para determinadas funções de acordo com algumas premissas. Lembrando que nesse caso estamos utilizando a ideia de motoboys partindo em direção à lojas.
 
-## REQUISITOS
+### REQUISITOS
 
 - python 3.10
 - pip instalado
 
-## REPOSITORIO
+### REPOSITORIO
 
 .
 └── PYTHON_EXERCISE<br />
@@ -34,7 +34,7 @@
 ├── requirements.txt<br />
 └── TESTE TECNOLOGIA - DESENVOLVEDORES.pdf
 
-## PASSOS
+### PASSOS
 
 - Primeiro, clone o projeto do git na pasta de sua escolha para executa-lo localmente. Execute os comandos dentro da pasta do projeto na ordem abaixo.
 
@@ -71,16 +71,16 @@ python3 app.py
 
 ## ENGLISH
 
-## ABOUT
+### ABOUT
 
 - This project has a goal to split employees to the right position following few premises. In this case I'm using motoboy heading to stores.
 
-## REQUIREMENTS
+### REQUIREMENTS
 
 - python 3.10
-- pip instalado
+- pip installed
 
-## REPOSITORY
+### REPOSITORY
 
 .
 └── PYTHON_EXERCISE<br />
@@ -103,7 +103,7 @@ python3 app.py
 ├── requirements.txt<br />
 └── TESTE TECNOLOGIA - DESENVOLVEDORES.pdf
 
-## STEPS
+### STEPS
 
 - First, clone the repository in the local folder. Second, follow the commands below in the right order.
 
