@@ -27,6 +27,12 @@ def test_validationName():
 def test_validationNameExist():
     assert InputValues.validationNameExist("TEST@") == "test@"
 
+def test_validationShare():
+    assert InputValues.validationShare("50%") == 0.5
+
+def test_validationOrders():
+    assert InputValues.validationOrders("50,100,150,200,250") == [50,100,150,200,250]
+
 # APP FUNCTIONS
 import app
 def test_MotoBoyDelivery():

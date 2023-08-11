@@ -39,7 +39,7 @@ class InputValues():
         else:
             number = number.replace(",",".").replace("%","")
             try:
-                number = float(number)
+                number = float(number)/100
                 return number
             except:
                 return False
@@ -50,7 +50,7 @@ class InputValues():
             array = None
             return array
         else:
-            array = "["+array.replace(",",".").replace("[","").replace("]","")+"]"
+            array = "["+array.replace("[","").replace("]","").replace("'","").replace('"','')+"]"
             try:
                 array = literal_eval(array)
                 return array
