@@ -55,7 +55,6 @@ def MotoBoyDelivery(numberMotoboys,store1,store2,store3,share1,share2,share3):
 
     
       round +=1
-    print(dictMotoBoy)
     return dictMotoBoy
 
 def resultDeliveryDay(numberMotoboys,**kwargs):
