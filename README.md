@@ -63,11 +63,15 @@ python3 app.py
 ```
 
 - O problema proposto encontra-se no pdf
-- Este app pode executar a separação dos motoboys por quantidade de motoboys e das 3 lojas, podemos colocar quantas encomendas quisermos também. Essas opções estão desabilitadas pelo fato de operar apenas para resolver o problema proposto;
+- Este app pode executar a separação dos motoboys por quantidade de motoboys e das 3 lojas, podemos colocar quantas encomendas quisermos também. Essas opções estão desabilitadas pelo fato de operar apenas para resolver o problema proposto para isso execute o comando abaixo;
 - Exemplo: Loja 1 vai ter agora 5 entregas, logo passamos um array com 5 valores;
 - Podemos também alterar a porcentagem recebida pelos motoboys de acordo com a loja. Exemplo loja 3 vai dar 20%, passamos uma variável com share3 = 0.2;
 - Estas opções encontram-se comentadas. Caso queira utiliza-las, descomente e siga as premissas explicadas no prompt;
 - Digite no nome do motoboy motoboy{numero} ou Motoboy{numero}, não Moto {numero}
+
+```
+python3 app_pers.py
+```
 
 ## ENGLISH
 
@@ -132,7 +136,11 @@ python3 app.py
 ```
 
 - The proposed problem can be found in pdf file;
-- This app can execute rearrangement of motoboys by quantity of three stores, each one can have n orders. This option is disable to use but you can enable it just by uncommenting the code in app.py;
+- This app can execute rearrangement of motoboys by quantity of three stores, each one can have n orders. This option is disable to use but you can run this mode typing the code below;
 - We can change the quantity of orders of each store by inserting an array of each one passing the values of each order. Example store1 ===> 50,10,150,100,70,30 (The code will understand that it's an array);
 - Also we can change the share of each store passing share3 (share of store 3) = 0.5, which corresponds to 50%;
 - Type motoboy{number} or Motoboy{number}, not Moto {number}
+
+```
+python3 app_pers.py
+```
